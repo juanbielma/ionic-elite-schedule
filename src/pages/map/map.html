@@ -1,0 +1,30 @@
+<!--
+  Generated template for the Map page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>map</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<ion-fab left bottom>
+    <button ion-fab color="primary" (click)="getDirections()">
+			<ion-icon name="navigate"></ion-icon>
+		</button>
+</ion-fab>
+
+	<sebm-google-map [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom">
+		<sebm-google-map-marker [latitude]="map.lat" [longitude]="map.lng">
+      <sebm-google-map-info-window>{{map.markerLabel}}</sebm-google-map-info-window>
+    </sebm-google-map-marker>
+	</sebm-google-map>
+
+</ion-content>
